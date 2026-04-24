@@ -6,6 +6,18 @@ function listarNumeros(){
 }
 
 function ejecutar(numEjercicio){
+
+    switch(numEjercicio){
+        case 1: listarNumeros();
+        break;
+        case 2: listarNumerosReversa();
+        break;
+        case 3: listarPares();
+        break;
+        case 4: listarImpares();
+        break;
+    }
+
    if(numEjercicio == 1){
     listarNumeros();
    }else if(numEjercicio == 2){

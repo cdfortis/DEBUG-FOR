@@ -1,0 +1,124 @@
+/* Importar una fuente tipo sistema/código */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace; /* Fuente de programador */
+}
+
+body {
+    background-color: #0d1117; /* Fondo oscuro tipo GitHub */
+    background-image: 
+        radial-gradient(#1f2937 1px, transparent 1px);
+    background-size: 20px 20px; /* Patrón de puntos tecnológicos */
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado y Botón */
+.header {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    background: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
+    border-bottom: 2px solid #30363d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.btn-probar {
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ff41; /* Verde Matrix/Terminal */
+    background: transparent;
+    border: 2px solid #00ff41;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.btn-probar:hover {
+    background-color: #00ff41;
+    color: #0d1117;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Contenedor de la Tabla */
+.container {
+    margin-top: 50px;
+    width: 95%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #58a6ff; /* Azul tecnológico */
+    text-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+    font-size: 2rem;
+}
+
+.tabla-container {
+    background: #161b22;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 5px;
+    background: #0d1117;
+    border-radius: 4px;
+    border-left: 4px solid #30363d;
+    transition: all 0.2s ease;
+}
+
+.fila:hover {
+    border-left-color: #58a6ff;
+    background: #1c2128;
+    transform: scale(1.02);
+}
+
+.fila span {
+    color: #8b949e;
+}
+
+/* El resultado de la operación */
+.fila span:last-child {
+    font-weight: bold;
+    color: #ff7b72; /* Color resaltado para el resultado */
+    font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 20px;
+    }
+    
+    .btn-probar {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
