@@ -122,3 +122,53 @@ h1 {
         font-size: 1.5rem;
     }
 }
+
+/* Contenedor del encabezado para organizar botón e input */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo de la caja de texto (Input) */
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+#inputDato {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-bottom: 2px solid #58a6ff;
+    padding: 10px 15px;
+    color: #00ff41; /* Texto verde terminal */
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#inputDato:focus {
+    background: #161b22;
+    border-bottom-color: #00ff41;
+    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.1);
+}
+
+/* Placeholder personalizado */
+#inputDato::placeholder {
+    color: #484f58;
+    font-style: italic;
+}
+
+/* Ajuste responsive para el header */
+@media (max-width: 480px) {
+    .header-content {
+        width: 100%;
+    }
+    #inputDato {
+        font-size: 0.8rem;
+    }
+}
